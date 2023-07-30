@@ -19,6 +19,7 @@ const Card = memo(({ href, imageUrl, name, author, alt, fallbackImage = placehol
     <Box as={Link} to={href} margin={5} flexDir="column" alignItems="center">
       <AspectRatio ratio={2 / 3}>
         <Image
+          loading="lazy"
           objectFit="cover"
           src={imageUrl}
           fallbackSrc={fallbackImage}
